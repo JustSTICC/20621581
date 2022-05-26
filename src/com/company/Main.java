@@ -181,7 +181,7 @@ public class Main {
                         System.out.println("saveAs <filepath> - save changes to all grammar in a file chosen by the user.");
                         System.out.println("open <filepath> - load grammar from a file chosen by the user.");
                         System.out.println("close - closes the file without saving any changes.");
-                        System.out.println("addRule <id> <rule> - adds new rule in a grammar with their corresponding id.");
+                        System.out.println("addRule <id> <rule> - adds new rule in a grammar with their corresponding id.(rule format: 'start letter'->'rule' )");
                         System.out.println("removeRule <id> <n> - remove rule by its number in a grammar with their corresponding id.");
                         System.out.println("union <id1> <id2> - unites two grammars and outputs the new grammar with its corresponding id.");
                         System.out.println("concat <id1> <id2> - out of order");

@@ -34,7 +34,7 @@ public class GrammarCollection implements Serializable {
     }
     public void removeRuleById(int id, int num){
         if(this.grammars.size()>=id && id>0) {
-            this.grammars.get(id - 1).removeRule(num);
+            this.grammars.get(id - 1).removeRule( num );
             System.out.println("Rule successfully removed ");
         }
         else System.out.println("Invalid id!");
@@ -67,7 +67,7 @@ public class GrammarCollection implements Serializable {
         for( char c : terminal.toCharArray()){
             ch.add(c);
         }
-        terminal=ch.toString();
+        terminal=ch.toString().replace("[","").replace("]","").replace(", ","");
 
         ch.clear();
         String nonterminal = grammar1.getNon_terminal()+grammar2.getNon_terminal();
@@ -75,7 +75,7 @@ public class GrammarCollection implements Serializable {
             ch.add(c);
         }
 
-        nonterminal=ch.toString();
+        nonterminal=ch.toString().replace("[","").replace("]","").replace(", ","");
         Grammar union = new Grammar(terminal,nonterminal,grammar1.getFirst());
         this.grammars.add(union);
 

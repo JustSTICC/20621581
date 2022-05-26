@@ -18,6 +18,8 @@ abstract class LoadSave {
             if (!file.exists()) {
                 System.out.println("Creating new file.");
                 file.createNewFile();
+                GrammarCollection newGrammar = new GrammarCollection();
+                Save.saveGrammar(newGrammar, filename);
             }
 
             FileInputStream fis = new FileInputStream(file);
